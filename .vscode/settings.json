@@ -1,0 +1,29 @@
+{
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "files.insertFinalNewline": true,
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        },
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "python.analysis.typeCheckingMode": "strict",
+    "cSpell.words": [
+        "asyncpg",
+        "halfvec",
+        "hnsw",
+        "Hunyadi",
+        "Levente",
+        "mypy",
+        "numpy",
+        "pgvector",
+        "setuptools"
+    ]
+}
