@@ -17,6 +17,7 @@
     "python.analysis.typeCheckingMode": "strict",
     "cSpell.words": [
         "asyncpg",
+        "executemany",
         "halfvec",
         "hnsw",
         "Hunyadi",
@@ -24,6 +25,7 @@
         "mypy",
         "numpy",
         "pgvector",
-        "setuptools"
+        "setuptools",
+        "sparsevec"
     ]
 }
