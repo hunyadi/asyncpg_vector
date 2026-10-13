@@ -25,6 +25,7 @@ Register vector types with your database connection or connection pool:
 ```python
 from asyncpg_vector import register_vector
 
+
 async def main() -> None:
     ...
 
@@ -37,9 +38,11 @@ async def main() -> None:
 ```python
 from asyncpg_vector import register_vector
 
+
 async def init_connection(conn: asyncpg.Connection) -> None:
     await conn.execute("CREATE EXTENSION IF NOT EXISTS vector")
     await register_vector(conn)
+
 
 async def main() -> None:
     ...
@@ -72,13 +75,14 @@ Next, find documents in a knowledge base that match a search phrase using vector
 ```python
 from asyncpg_vector import HalfVector
 
+
 async def search(conn: asyncpg.Connection, phrase: str) -> list[str]:
     ...
 
     embedding_response = await ai_client.embeddings.create(
         input=phrase,
-        model="text-embedding-3-small",
-        encoding_format="base64"
+        model="text-embedding-3-small",  # aligned with `halfvec` size
+        encoding_format="base64",  # transmits data efficiently
     )
     embedding = HalfVector.from_float_base64(embedding_response.data[0].embedding)
     query = """

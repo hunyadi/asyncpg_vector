@@ -1,5 +1,5 @@
 import unittest
-from collections.abc import AsyncIterator, Sequence
+from collections.abc import AsyncGenerator, Sequence
 from contextlib import asynccontextmanager
 from random import random
 from struct import pack, unpack
@@ -10,7 +10,7 @@ from asyncpg_vector import HalfVector, SparseVector, Vector, register_vector
 
 
 @asynccontextmanager
-async def get_connection() -> AsyncIterator[asyncpg.Connection]:
+async def get_connection() -> AsyncGenerator[asyncpg.Connection, None]:
     conn = await asyncpg.connect(host="localhost", port=5432, user="postgres", password="postgres")
     try:
         yield conn
