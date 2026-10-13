@@ -28,7 +28,7 @@ if sys.version_info >= (3, 12):
 else:
     from typing_extensions import override
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __author__ = "Levente Hunyadi"
 __copyright__ = "Copyright 2025-2026, Levente Hunyadi"
 __license__ = "MIT"
